@@ -7,7 +7,9 @@ const categories = [
     description: '從史前時代到現代，台灣歷史的完整脈絡',
     icon: '📜',
     color: 'from-amber-500 to-orange-600',
-    articles: 8
+    articles: 8,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Presidential_Office_Building_%28Taiwan%29.jpg/640px-Presidential_Office_Building_%28Taiwan%29.jpg',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Presidential_Office_Building_%28Taiwan%29.jpg/640px-Presidential_Office_Building_%28Taiwan%29.jpg',
   },
   { 
     name: '地理', 
@@ -16,7 +18,8 @@ const categories = [
     description: '台灣的自然環境、地形特色與區域發展',
     icon: '🗺️',
     color: 'from-emerald-500 to-teal-600',
-    articles: 6
+    articles: 6,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Taroko_national_park.jpg/640px-Taroko_national_park.jpg'
   },
   { 
     name: '文化', 
@@ -25,7 +28,8 @@ const categories = [
     description: '多元族群文化的融合與在地特色',
     icon: '🎭',
     color: 'from-purple-500 to-violet-600',
-    articles: 5
+    articles: 5,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lukang_Tianhou_Temple.JPG/640px-Lukang_Tianhou_Temple.JPG'
   },
   { 
     name: '美食', 
@@ -34,7 +38,8 @@ const categories = [
     description: '從夜市小吃到精緻料理的美食文化',
     icon: '🍜',
     color: 'from-rose-500 to-pink-600',
-    articles: 4
+    articles: 4,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Taipei_Shilin_Night_Market.jpg/640px-Taipei_Shilin_Night_Market.jpg'
   },
   { 
     name: '藝術', 
@@ -43,7 +48,8 @@ const categories = [
     description: '傳統工藝到當代藝術的創作能量',
     icon: '🎨',
     color: 'from-cyan-500 to-blue-600',
-    articles: 3
+    articles: 3,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Taipei_Fine_Arts_Museum_2019.jpg/640px-Taipei_Fine_Arts_Museum_2019.jpg'
   },
   { 
     name: '音樂', 
@@ -52,7 +58,8 @@ const categories = [
     description: '從原住民音樂到流行音樂的聲音風景',
     icon: '🎵',
     color: 'from-indigo-500 to-purple-600',
-    articles: 2
+    articles: 2,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/National_Concert_Hall%2C_Taipei_2015.jpg/640px-National_Concert_Hall%2C_Taipei_2015.jpg'
   },
   { 
     name: '科技', 
@@ -61,7 +68,8 @@ const categories = [
     description: '科技島的創新發展與數位轉型',
     icon: '💻',
     color: 'from-slate-500 to-gray-600',
-    articles: 4
+    articles: 4,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/TSMC_Fab12.jpg/640px-TSMC_Fab12.jpg'
   },
   { 
     name: '自然', 
@@ -70,7 +78,8 @@ const categories = [
     description: '豐富的生態環境與環保議題',
     icon: '🌿',
     color: 'from-green-500 to-emerald-600',
-    articles: 3
+    articles: 3,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Yushan_main_peak%2BBlue_arrow.jpg/640px-Yushan_main_peak%2BBlue_arrow.jpg'
   },
   { 
     name: '人物', 
@@ -79,7 +88,8 @@ const categories = [
     description: '影響台灣發展的重要人物與故事',
     icon: '👥',
     color: 'from-orange-500 to-red-600',
-    articles: 5
+    articles: 5,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ang_Lee_-_66%C3%A8me_Festival_de_Venise_%28Mostra%29.jpg/400px-Ang_Lee_-_66%C3%A8me_Festival_de_Venise_%28Mostra%29.jpg'
   },
   { 
     name: '社會', 
@@ -88,7 +98,8 @@ const categories = [
     description: '社會變遷與當代議題的深度探討',
     icon: '🏛️',
     color: 'from-blue-500 to-indigo-600',
-    articles: 3
+    articles: 3,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Legislative_Yuan%2C_the_Republic_of_China.JPG/640px-Legislative_Yuan%2C_the_Republic_of_China.JPG'
   },
   { 
     name: '經濟', 
@@ -97,7 +108,8 @@ const categories = [
     description: '經濟奇蹟的成因與轉型挑戰',
     icon: '📊',
     color: 'from-yellow-500 to-amber-600',
-    articles: 2
+    articles: 2,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Taipei_101_from_afar.jpg/400px-Taipei_101_from_afar.jpg'
   },
   { 
     name: '生活', 
@@ -106,7 +118,8 @@ const categories = [
     description: '台灣人的生活方式與價值觀',
     icon: '🏠',
     color: 'from-teal-500 to-cyan-600',
-    articles: 2
+    articles: 2,
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/7-Eleven_in_Taipei.jpg/640px-7-Eleven_in_Taipei.jpg'
   }
 ];
 
@@ -122,7 +135,11 @@ const langPrefix = lang === 'en' ? '/en' : '';
   {categories.map((category, index) => (
     <a href={`${langPrefix}/${category.slug}`} class="category-card" data-color={category.color}>
       <div class="category-header">
-        <div class="category-icon">{category.icon}</div>
+        {category.cover ? (
+          <img src={category.cover} alt={category.name} class="category-cover" loading="lazy" />
+        ) : (
+          <div class="category-icon">{category.icon}</div>
+        )}
         <div class="category-gradient"></div>
         <div class="article-badge">
           <span class="article-count">{category.articles}</span>
@@ -203,6 +220,16 @@ const langPrefix = lang === 'en' ? '/en' : '';
     flex-shrink: 0;
   }
   
+  .category-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  .category-card:hover .category-cover {
+    transform: scale(1.08);
+  }
+
   .category-gradient {
     position: absolute;
     top: 0;

@@ -5,108 +5,120 @@ export const categoryConfig = {
     name_en: 'History',
     description: '從史前時代到現代，台灣歷史的完整脈絡',
     icon: '📜',
-    color: '#92400e', // 暖棕
+    color: '#92400e',
     colorLight: '#f59e0b20',
     gradient: 'linear-gradient(135deg, #92400e, #d97706)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Presidential_Office_Building_%28Taiwan%29.jpg/640px-Presidential_Office_Building_%28Taiwan%29.jpg',
   },
   'geography': { 
     name: '地理',
     name_en: 'Geography',
     description: '台灣的自然環境、地形特色與區域發展',
     icon: '🗺️',
-    color: '#065f46', // 森綠
+    color: '#065f46',
     colorLight: '#059f4620',
     gradient: 'linear-gradient(135deg, #065f46, #10b981)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Taroko_national_park.jpg/640px-Taroko_national_park.jpg',
   },
   'culture': { 
     name: '文化',
     name_en: 'Culture',
     description: '多元族群文化的融合與在地特色',
     icon: '🎭',
-    color: '#7c3aed', // 紫
+    color: '#7c3aed',
     colorLight: '#7c3aed20',
     gradient: 'linear-gradient(135deg, #7c3aed, #a855f7)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lukang_Tianhou_Temple.JPG/640px-Lukang_Tianhou_Temple.JPG',
   },
   'food': { 
     name: '美食',
     name_en: 'Food',
     description: '從夜市小吃到精緻料理的美食文化',
     icon: '🍜',
-    color: '#ea580c', // 橘紅
+    color: '#ea580c',
     colorLight: '#ea580c20',
     gradient: 'linear-gradient(135deg, #ea580c, #f97316)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Taipei_Shilin_Night_Market.jpg/640px-Taipei_Shilin_Night_Market.jpg',
   },
   'art': { 
     name: '藝術',
     name_en: 'Art',
     description: '傳統工藝到當代藝術的創作能量',
     icon: '🎨',
-    color: '#be185d', // 桃紅
+    color: '#be185d',
     colorLight: '#be185d20',
     gradient: 'linear-gradient(135deg, #be185d, #ec4899)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Taipei_Fine_Arts_Museum_2019.jpg/640px-Taipei_Fine_Arts_Museum_2019.jpg',
   },
   'music': { 
     name: '音樂',
     name_en: 'Music',
     description: '從原住民音樂到流行音樂的聲音風景',
     icon: '🎵',
-    color: '#0891b2', // 青
+    color: '#0891b2',
     colorLight: '#0891b220',
     gradient: 'linear-gradient(135deg, #0891b2, #06b6d4)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/National_Concert_Hall%2C_Taipei_2015.jpg/640px-National_Concert_Hall%2C_Taipei_2015.jpg',
   },
   'technology': { 
     name: '科技',
     name_en: 'Technology',
     description: '科技島的創新發展與數位轉型',
     icon: '💻',
-    color: '#1d4ed8', // 藍
+    color: '#1d4ed8',
     colorLight: '#1d4ed820',
     gradient: 'linear-gradient(135deg, #1d4ed8, #3b82f6)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/TSMC_Fab12.jpg/640px-TSMC_Fab12.jpg',
   },
   'nature': { 
     name: '自然',
     name_en: 'Nature',
     description: '豐富的生態環境與環保議題',
     icon: '🌿',
-    color: '#15803d', // 翠綠
+    color: '#15803d',
     colorLight: '#15803d20',
     gradient: 'linear-gradient(135deg, #15803d, #22c55e)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Yushan_main_peak%2BBlue_arrow.jpg/640px-Yushan_main_peak%2BBlue_arrow.jpg',
   },
   'people': { 
     name: '人物',
     name_en: 'People',
     description: '影響台灣發展的重要人物與故事',
     icon: '👥',
-    color: '#b45309', // 琥珀
+    color: '#b45309',
     colorLight: '#b4530920',
     gradient: 'linear-gradient(135deg, #b45309, #f59e0b)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Ang_Lee_-_66%C3%A8me_Festival_de_Venise_%28Mostra%29.jpg/400px-Ang_Lee_-_66%C3%A8me_Festival_de_Venise_%28Mostra%29.jpg',
   },
   'society': { 
     name: '社會',
     name_en: 'Society',
     description: '社會變遷與當代議題的深度探討',
     icon: '🏛️',
-    color: '#475569', // 石墨
+    color: '#475569',
     colorLight: '#47556920',
     gradient: 'linear-gradient(135deg, #475569, #64748b)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Legislative_Yuan%2C_the_Republic_of_China.JPG/640px-Legislative_Yuan%2C_the_Republic_of_China.JPG',
   },
   'economy': { 
     name: '經濟',
     name_en: 'Economy',
     description: '經濟奇蹟的成因與轉型挑戰',
     icon: '📊',
-    color: '#c2410c', // 深橘
+    color: '#c2410c',
     colorLight: '#c2410c20',
     gradient: 'linear-gradient(135deg, #c2410c, #ea580c)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Taipei_101_from_afar.jpg/400px-Taipei_101_from_afar.jpg',
   },
   'lifestyle': { 
     name: '生活',
     name_en: 'Lifestyle',
     description: '台灣人的生活方式與價值觀',
     icon: '🏠',
-    color: '#4d7c0f', // 草綠
+    color: '#4d7c0f',
     colorLight: '#4d7c0f20',
     gradient: 'linear-gradient(135deg, #4d7c0f, #65a30d)',
+    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/7-Eleven_in_Taipei.jpg/640px-7-Eleven_in_Taipei.jpg',
   }
 };
 
