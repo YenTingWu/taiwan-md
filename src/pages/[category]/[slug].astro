@@ -152,8 +152,12 @@ const processedContent = marked.parse(resolvedContent);
 ---
 
 <Layout 
-  title={`${title} - Taiwan.md`}
+  title={title}
   description={description}
+  type="article"
+  datePublished={frontmatter.date || new Date().toISOString()}
+  dateModified={frontmatter.modified || frontmatter.date || new Date().toISOString()}
+  content={content}
 >
   <!-- Reading Progress Bar -->
   <div class="reading-progress" id="reading-progress"></div>

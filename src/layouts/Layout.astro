@@ -7,9 +7,12 @@ interface Props {
   lang?: 'zh-TW' | 'en';
   image?: string;
   type?: 'website' | 'article';
+  datePublished?: string;
+  dateModified?: string;
+  content?: string;
 }
 
-const { title, description = '讓全世界完整認識台灣', lang = 'zh-TW', image, type } = Astro.props;
+const { title, description = '讓全世界完整認識台灣', lang = 'zh-TW', image, type, datePublished, dateModified, content } = Astro.props;
 const currentPath = Astro.url.pathname;
 ---
 
@@ -23,7 +26,7 @@ const currentPath = Astro.url.pathname;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&display=swap" rel="stylesheet" />
     <title>{title} | Taiwan.md</title>
-    <SEO title={title} description={description} lang={lang} image={image} type={type} />
+    <SEO title={title} description={description} lang={lang} image={image} type={type} datePublished={datePublished} dateModified={dateModified} content={content} />
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-JGC5W00N7T"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
