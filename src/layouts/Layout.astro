@@ -5,6 +5,7 @@ import { resolve, join, basename } from 'path';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import matter from 'gray-matter';
+import { getI18nPath } from '../i18n/utils';
 import type { Lang } from '../types';
 
 interface Props {
@@ -98,72 +99,7 @@ for (const [slug, folder] of Object.entries(categoryMapping)) {
 const currentPath = Astro.url.pathname;
 const isEn = lang === 'en';
 
-const i18n = {
-  nav: {
-    explore: isEn ? 'Explore' : '探索',
-    graph: isEn ? 'Graph' : '🕸️ 圖譜',
-    map: isEn ? 'Map' : '地圖',
-    about: isEn ? 'About' : '關於',
-    contribute: isEn ? 'Contribute' : '貢獻',
-    resources: isEn ? 'Resources' : '資源',
-    data: isEn ? 'Data' : '數據',
-    assets: isEn ? 'SVG Assets' : 'SVG 素材',
-    projects: isEn ? 'Projects' : '專案',
-  },
-  footer: {
-    explore: isEn ? 'Explore' : '探索',
-    history: isEn ? 'History' : '歷史',
-    culture: isEn ? 'Culture' : '文化',
-    food: isEn ? 'Food' : '美食',
-    technology: isEn ? 'Technology' : '科技',
-    nature: isEn ? 'Nature' : '自然',
-    society: isEn ? 'Society' : '社會',
-    project: isEn ? 'Project' : '專案',
-    about: isEn ? 'About' : '關於',
-    graph: isEn ? 'Knowledge Graph' : '知識圖譜',
-    contribute: isEn ? 'Contribute Guide' : '貢獻指南',
-    changelog: isEn ? 'Update History' : '更新紀錄',
-    contact: isEn ? 'Connect' : '聯繫',
-    report: isEn ? 'Report Issue' : '回報問題',
-    discuss: isEn ? 'Discussions' : '討論區',
-    desc: isEn
-      ? 'Open-source, AI-friendly knowledge base about Taiwan'
-      : '開源、AI-friendly 的台灣知識庫',
-  },
-};
-
-// Language switch logic
-let zhLink = '/';
-let enLink = '/en';
-
-if (currentPath.startsWith('/en')) {
-  // Current is EN, switch to ZH: remove /en prefix
-  zhLink = currentPath.replace(/^\/en/, '') || '/';
-  enLink = currentPath;
-} else {
-  // Current is ZH, switch to EN: add /en prefix
-  zhLink = currentPath;
-  enLink = '/en' + (currentPath === '/' ? '' : currentPath);
-}
-
-const navConfig = [
-  { path: '/#categories', label: i18n.nav.explore },
-  { path: '/graph', label: i18n.nav.graph },
-  { path: '/about', label: i18n.nav.about },
-  { path: '/contribute', label: i18n.nav.contribute },
-  { path: '/resources', label: i18n.nav.resources },
-  { path: '/data', label: i18n.nav.data },
-  { path: '/assets', label: i18n.nav.assets },
-  { path: '/projects', label: i18n.nav.projects },
-].map((item) => {
-  const fullPath = isEn ? `/en${item.path}` : item.path;
-  const pathWithoutHash = fullPath.replace(/#.*$/, '');
-  const active =
-    pathWithoutHash !== fullPath
-      ? false
-      : currentPath.startsWith(pathWithoutHash);
-  return { ...item, fullPath, active };
-});
+const enLink = getI18nPath('en', currentPath);
 ---
 
 <!doctype html>
