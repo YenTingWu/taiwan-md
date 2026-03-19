@@ -36,6 +36,7 @@ export const ui: Record<Lang, Record<string, string>> = {
     'footer.report': 'Report Issue',
     'footer.discuss': 'Discussions',
     'footer.desc': 'Open-source, AI-friendly knowledge base about Taiwan',
+    'footer.support-us': 'Support us',
   },
   'zh-TW': {
     'nav.home': '首頁',
@@ -65,5 +66,6 @@ export const ui: Record<Lang, Record<string, string>> = {
     'footer.report': '回報問題',
     'footer.discuss': '討論區',
     'footer.desc': '開源、AI-friendly 的台灣知識庫',
+    'footer.support-us': '支持我們',
   },
 } as const;
