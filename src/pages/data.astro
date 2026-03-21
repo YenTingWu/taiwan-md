@@ -1,7 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
-import { getCompanyConfigs, sectorColors } from '../utils/companyConfig';
+import { getCompanyConfigs, sectorColors } from '../utils/dataConfig';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
