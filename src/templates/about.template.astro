@@ -19,12 +19,24 @@ const t = useTranslations(lang);
           <div class="naming-card">
             <div class="naming-icon">{t('about.naming.tech.icon')}</div>
             <h4>{t('about.naming.tech.title')}</h4>
-            <p set:html={t('about.naming.tech.desc.html')} />
+            <div>
+              <code>.md</code> = Markdown
+              <p
+                style="display:inline"
+                set:html={t('about.naming.tech.desc.html')}
+              />
+            </div>
           </div>
           <div class="naming-card">
             <div class="naming-icon">{t('about.naming.symbol.icon')}</div>
             <h4>{t('about.naming.symbol.title')}</h4>
-            <p set:html={t('about.naming.symbol.desc.html')} />
+            <div>
+              <code>.md</code>
+              <p
+                style="display:inline"
+                set:html={t('about.naming.symbol.desc.html')}
+              />
+            </div>
           </div>
           <div class="naming-card">
             <div class="naming-icon">{t('about.naming.lucky.icon')}</div>
