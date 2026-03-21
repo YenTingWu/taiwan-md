@@ -514,3 +514,171 @@ export const getCompanyConfigs = (
     ticker: '3034',
   },
 ];
+
+export type CategoryItem = {
+  name: string;
+  url: string;
+  desc: string;
+};
+
+export type Category = {
+  icon: string;
+  title: string;
+  description: string;
+  items: CategoryItem[];
+};
+
+export const getCategories = (
+  t: ReturnType<typeof useTranslations>,
+): Category[] => [
+  {
+    icon: '📊',
+    title: t('data.category.1.title'),
+    description: t('data.category.1.description'),
+    items: [
+      {
+        name: t('data.category.1.item.1.name'),
+        url: 'https://data.gov.tw/',
+        desc: t('data.category.1.item.1.desc'),
+      },
+      {
+        name: t('data.category.1.item.2.name'),
+        url: 'https://statdb.dgbas.gov.tw/',
+        desc: t('data.category.1.item.2.desc'),
+      },
+      {
+        name: t('data.category.1.item.3.name'),
+        url: 'https://db.cec.gov.tw/',
+        desc: t('data.category.1.item.3.desc'),
+      },
+      {
+        name: t('data.category.1.item.4.name'),
+        url: 'https://law.moj.gov.tw/',
+        desc: t('data.category.1.item.4.desc'),
+      },
+      {
+        name: t('data.category.1.item.5.name'),
+        url: 'https://airtw.moenv.gov.tw/',
+        desc: t('data.category.1.item.5.desc'),
+      },
+    ],
+  },
+  {
+    icon: '🗺️',
+    title: t('data.category.2.title'),
+    description: t('data.category.2.description'),
+    items: [
+      {
+        name: t('data.category.2.item.1.name'),
+        url: 'https://smc.peering.tw/',
+        desc: t('data.category.2.item.1.desc'),
+      },
+      {
+        name: t('data.category.2.item.2.name'),
+        url: 'https://maps.nlsc.gov.tw/',
+        desc: t('data.category.2.item.2.desc'),
+      },
+      {
+        name: t('data.category.2.item.3.name'),
+        url: 'https://scweb.cwa.gov.tw/',
+        desc: t('data.category.2.item.3.desc'),
+      },
+      {
+        name: t('data.category.2.item.4.name'),
+        url: 'https://fhy.wra.gov.tw/',
+        desc: t('data.category.2.item.4.desc'),
+      },
+      {
+        name: t('data.category.2.item.5.name'),
+        url: 'https://env.gov.tw/',
+        desc: t('data.category.2.item.5.desc'),
+      },
+    ],
+  },
+  {
+    icon: '🤖',
+    title: t('data.category.3.title'),
+    description: t('data.category.3.description'),
+    items: [
+      {
+        name: t('data.category.3.item.1.name'),
+        url: 'https://g0v.tw/',
+        desc: t('data.category.3.item.1.desc'),
+      },
+      {
+        name: t('data.category.3.item.2.name'),
+        url: 'https://g0v-jothon.kktix.cc/',
+        desc: t('data.category.3.item.2.desc'),
+      },
+      {
+        name: t('data.category.3.item.3.name'),
+        url: 'https://cofacts.tw/',
+        desc: t('data.category.3.item.3.desc'),
+      },
+      {
+        name: t('data.category.3.item.4.name'),
+        url: 'https://vtaiwan.tw/',
+        desc: t('data.category.3.item.4.desc'),
+      },
+      {
+        name: t('data.category.3.item.5.name'),
+        url: 'https://join.gov.tw/',
+        desc: t('data.category.3.item.5.desc'),
+      },
+    ],
+  },
+  {
+    icon: '📰',
+    title: t('data.category.4.title'),
+    description: t('data.category.4.description'),
+    items: [
+      {
+        name: t('data.category.4.item.1.name'),
+        url: 'https://www.twreporter.org/',
+        desc: t('data.category.4.item.1.desc'),
+      },
+      {
+        name: t('data.category.4.item.2.name'),
+        url: 'https://tfc-taiwan.org.tw/',
+        desc: t('data.category.4.item.2.desc'),
+      },
+      {
+        name: t('data.category.4.item.3.name'),
+        url: 'https://www.readr.tw/',
+        desc: t('data.category.4.item.3.desc'),
+      },
+      {
+        name: t('data.category.4.item.4.name'),
+        url: 'https://artouch.com/',
+        desc: t('data.category.4.item.4.desc'),
+      },
+    ],
+  },
+  {
+    icon: '🔬',
+    title: t('data.category.5.title'),
+    description: t('data.category.5.description'),
+    items: [
+      {
+        name: t('data.category.5.item.1.name'),
+        url: 'https://openmuseum.tw/',
+        desc: t('data.category.5.item.1.desc'),
+      },
+      {
+        name: t('data.category.5.item.2.name'),
+        url: 'https://tcmb.culture.tw/',
+        desc: t('data.category.5.item.2.desc'),
+      },
+      {
+        name: t('data.category.5.item.3.name'),
+        url: 'https://tbn.biodiv.tw/',
+        desc: t('data.category.5.item.3.desc'),
+      },
+      {
+        name: t('data.category.5.item.4.name'),
+        url: 'https://huggingface.co/TAIDE',
+        desc: t('data.category.5.item.4.desc'),
+      },
+    ],
+  },
+];
